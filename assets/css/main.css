@@ -806,6 +806,24 @@
 					border-left: 0;
 				}
 
+/* Flex */
+@import "compass/css3";
+
+	.flex-container {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		-webkit-flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
 /* Wrapper */
 
 	#wrapper {
