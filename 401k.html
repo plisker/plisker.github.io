@@ -1,0 +1,125 @@
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700" rel="stylesheet">
+    <title>401(k) Match Calculator</title>
+    <link rel="stylesheet" href="assets/css/401k.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/401k.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+        <h1>401(k) Match Calculator</h1>
+        <form>
+            <div class="box">
+                <h2>Annual salary</h2>
+                <div class="net_gross">
+                    $<input id="annual_gross" type="text" placeholder="0" onkeyup="calculateMatches()">
+                </div>
+                <div class="custom-select" style="width:200px;">
+                    <select id="paychecks" onkeyup="calculateMatches()" onclick="calculateMatches()">
+                      <option value=52>Weekly</option>
+                      <option value=26>Bi-weekly</option>
+                      <option value=24 selected>Semi-monthly</option>
+                      <option value=12>Monthly</option>
+                    </select> Pay Frequency
+                </div>
+            </div>
+            <div class="box">
+                <h2>Bonus</h2>
+                <div class="net_gross">
+                    <input id="bonus_percentage" type="number" min="0" max="100" placeholder="0" onkeyup="calculateMatches()">% of Salary
+                </div>
+                <div class="net_gross">
+                    <input id="bonus_payout" type="number" min="0" max="100" placeholder="0" onkeyup="calculateMatches()">% Expected Payout
+                </div>
+            </div>
+            <div class="box">
+                <h2>Company Matching</h2>
+                <div class="net_gross">
+                    <input id="company_match" type="number" min="0" max="100" placeholder="0" onkeyup="calculateMatches()">% Match
+                </div>
+                <div class="net_gross">
+                    <input id="company_cap" type="number" min="0" max="100" placeholder="0" onkeyup="calculateMatches()">% Cap of Salary
+                </div>
+            </div>
+        </form>
+        <h1>Compensation</h1>
+        <form>
+            <div class="box">
+                <h2>Total Income</h2>
+                <div class="net_gross">
+                    $<input id="final_annual_gross" readonly> gross salary
+                </div>
+                <div class="net_gross">
+                    $<input id="final_bonus" readonly> gross bonus
+                </div>
+                <div class="net_gross">
+                    $<input id="final_matching" readonly> 401(k) employer contributions
+                </div>
+                <div class="net_gross">
+                    $<input id="final_total" readonly> total income
+                </div>
+            </div>
+        </form>
+        <h1>401(k) Match Suggestions</h1>
+        <form>
+            <div class="box">
+                <h2>Maximize Match</h2>
+                <h3>Set bonus match to:</h3>
+                <div class="net_gross">
+                    <input id="bonus_match1" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+
+                <h3>Set salary match between:</h3>
+                <div class="net_gross">
+                    <input id="min_match" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+                and
+                <div class="net_gross">
+                    <input id="max_match1" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+            </div>
+            <div class="box">
+                <h2>Maximize Match and Max-Out Contribution</h2>
+                
+                <h3>Set bonus contribution to:</h3>
+                <div class="net_gross">
+                    <input id="bonus_match2" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+
+
+                <h3>Set contribution to:</h3>
+                <div class="net_gross">
+                    <input id="max_match2" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+
+                <h3>Set contribution of final paycheck to at least:</h3>
+                <div class="net_gross">
+                    <input id="final_max_match" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Maximize Match, Max-Out Contribution, and Be Flexible in case of Raises</h2>
+                
+                <h3>Set bonus contribution to:</h3>
+                <div class="net_gross">
+                    <input id="bonus_match3" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+
+
+                <h3>Set contribution to:</h3>
+                <div class="net_gross">
+                    <input id="min_raise_match" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+
+                <h3>Set contribution of final paycheck to:</h3>
+                <div class="net_gross">
+                    <input id="final_raise_max_match" type="number" min="0" max="100" placeholder="0" readonly>%
+                </div>
+            </div>
+        </form>
+    <!-- </div> -->
+</body>
