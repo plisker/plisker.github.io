@@ -35,8 +35,8 @@ function calculateMatches() {
   var bonusPayout =
     getNumber(document.getElementById("bonus_payout").value) / 100 || 0;
 
-  var companyMatch =
-    getNumber(document.getElementById("company_match").value) / 100 || 0;
+  var companyMatch = 1;
+    // getNumber(document.getElementById("company_match").value) / 100 || 0;
   var companyCap =
     getNumber(document.getElementById("company_cap").value) / 100 || 0;
 
