@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.bookmarklet-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.bookmarklet-link:hover {
+  background-color: #45a049;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: #fff;
+  }
+
+  h1,
+  p {
+    color: #ccc;
+  }
+
+  .bookmarklet-link {
+    background-color: #2b8a3e;
+  }
+
+  .bookmarklet-link:hover {
+    background-color: #258135;
+  }
+}
