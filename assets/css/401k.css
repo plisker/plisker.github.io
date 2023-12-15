@@ -1,25 +1,27 @@
-body{
-  border-box: border-box;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: center;
-  background-color:#009999;
-  color: #FFFFFF;
+  background-color: #222;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-h1{
+h1 {
   font-size: 3em;
 }
 
-h2{
+h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-size: 1.2em;
+}
 
-form{
+form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -29,29 +31,28 @@ input {
   width: 3em;
   margin: 0.5em;
   border-radius: 0.2em;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   color: #004d4d;
   text-align: center;
-  background-color: rgba( 255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.3em;
-  border-style: none; 
+  border-style: none;
   padding-top: 0.2em;
 }
 
-input:hover{
-  background-color: rgba( 255, 255, 255, 1);
+input:hover {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .box {
-  background-color : #008080;
-  width: 13em;
+  background-color: #444;
+  width: 16em;
   padding: 0.5em;
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: right;
   margin: 0.5em;
-  
 }
 .net_gross {
   display: flex;
@@ -61,38 +62,36 @@ input:hover{
 
 .reset {
   width: 6em;
-  background-color : #008080;
+  background-color: #444;
   border-radius: 0.4em;
   padding-top: 10px;
   padding-bottom: 6px;
   border-style: none;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.3em;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   -webkit-transition-duration: 0.4s; /* Safari*/
   transition-duration: 0.1s;
-  border: solid 2px rgba( 255, 255, 255, 0.0);
+  border: solid 2px rgba(255, 255, 255, 0);
 }
 
 .reset:hover {
-  border: solid 2px rgba( 255, 255, 255, 0.8);
+  border: solid 2px rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
-
-@media only screen and (max-width : 745px){
-  body{
+@media only screen and (max-width: 745px) {
+  body {
     height: auto;
   }
-  form{
-  width: 100%;
-  display: flex;
-  flex-direction : column;
-  justify-content: center;
-  align-items: center;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
 }
