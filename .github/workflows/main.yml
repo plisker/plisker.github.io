@@ -1,0 +1,52 @@
+name: Image Compression
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  compress-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install squoosh-cli
+        run: npm install -g @squoosh/cli
+
+      - name: Compress images
+        run: |
+          for file in $(find . -type f -name "*.jpg"); do
+            if [[ "$file" =~ -compressed\..*$ ]]; then
+              echo "Skipping $file"
+              continue
+            fi
+
+            compressed_file="${file%.*}-compressed.jpg"
+            if [ ! -f "$compressed_file" ]; then
+              squoosh-cli --mozjpeg '{"quality": 80}' "$file" -d "$(dirname "$file")" -s "-compressed"
+            else
+              echo "Skipping $file, it has already been compressed"
+            fi
+            
+            webp_file="${file%.*}-compressed.webp"
+            if [ ! -f "$webp_file" ]; then
+              squoosh-cli --webp '{"quality": 80}' "$file" -d "$(dirname "$file")" -s "-compressed"
+            else
+              echo "Skipping $file, it has already been converted to WebP"
+            fi
+          done
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Compress and convert images" && git push

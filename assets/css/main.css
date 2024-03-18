@@ -85,15 +85,25 @@
 	body {
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.jpg");
 		background-repeat: repeat,			no-repeat,			no-repeat;
 		background-size: 100px 100px, cover,				cover;
 		background-position: top left,		center center,		bottom center;
 		background-attachment: fixed,			fixed,				fixed;
 	}
+
+    /* Use WebP if supported */
+    @supports (background-image: url("../../images/bg-compressed.webp")) {
+        body {
+            background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.webp");
+            background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.webp");
+            background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.webp");
+            background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 0, 0, 0.15) 5%, rgba(0, 0, 0, 0.15)), url("../../images/bg-compressed.webp");
+        }
+    }
 
 		body:after {
 			content: '';
