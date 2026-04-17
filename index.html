@@ -4,7 +4,7 @@ Identity by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -23,13 +23,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <meta name="author" content="Paul Lisker" />
     <link rel="canonical" href="https://lisker.me/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <html lang="en" xml:lang="en" xmlns="https://www.w3.org/1999/xhtml">
     <meta http-equiv="Content-Language" content="en">
     <script src="https://kit.fontawesome.com/414f558033.js" crossorigin="anonymous"></script>
-    <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
@@ -54,7 +50,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     <picture>
                         <source srcset="images/avatar-compressed.webp" type="image/webp">
                         <source srcset="images/avatar-compressed.jpg" type="image/jpeg">
-                        <img src="images/avatar-compressed.jpg">
+                        <img src="images/avatar-compressed.jpg" alt="Paul Lisker">
                     </picture>
                 </span>
                 <h1>Paul Lisker</h1>
@@ -62,7 +58,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             </header>
             <hr />
             <ul class="flex-container">
-                <li class="flex-item"><a href="lisker_resume.pdf" target="_blank" class="button">Resume</a></li>
+                <li class="flex-item"><a href="lisker_resume.pdf" target="_blank" rel="noopener noreferrer" class="button">Resume</a></li>
                 <li class="flex-item"><a href="https://projects.lisker.me" class="button">Projects</a></li>
                 <li class="flex-item"><a href="https://photos.lisker.me" class="button">Photos</a></li>
                 <li class="flex-item"><a href="https://music.lisker.me" class="button">Music</a></li>
@@ -70,15 +66,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <hr />
             <footer>
                 <ul class="icons">
-                    <li class="flex-item"><a href="https://www.linkedin.com/in/paullisker/" rel="noopener"
-                            class="fa-brands fa-linkedin" target=_blank>LinkedIn</a></li>
-                    <li class="flex-item"><a href="https://www.instagram.com/paullisker/" rel="noopener"
-                            class="fa-brands fa-instagram" target=_blank>LinkedIn</a></li>
-                    <li class="flex-item"><a href="https://letterboxd.com/plisker/" rel="noopener" class="fa-brands fa-letterboxd"
-                            target=_blank>Letterboxd</a></li>
-                    <li class="flex-item"><a href="https://github.com/plisker/" rel="noopener" class="fa-brands fa-github"
-                            target=_blank>Github</a></li>
-                    <li class="flex-item"><a href="mailto:paul@lisker.me" class="fa-regular fa-envelope" target=_blank>Email</a>
+                    <li class="flex-item"><a href="https://www.linkedin.com/in/paullisker/" rel="noopener noreferrer"
+                            class="fa-brands fa-linkedin" target="_blank">LinkedIn</a></li>
+                    <li class="flex-item"><a href="https://www.instagram.com/paullisker/" rel="noopener noreferrer"
+                            class="fa-brands fa-instagram" target="_blank">Instagram</a></li>
+                    <li class="flex-item"><a href="https://letterboxd.com/plisker/" rel="noopener noreferrer" class="fa-brands fa-letterboxd"
+                            target="_blank">Letterboxd</a></li>
+                    <li class="flex-item"><a href="https://github.com/plisker/" rel="noopener noreferrer" class="fa-brands fa-github"
+                            target="_blank">Github</a></li>
+                    <li class="flex-item"><a href="mailto:paul@lisker.me" class="fa-regular fa-envelope">Email</a>
                     </li>
                 </ul>
             </footer>
@@ -87,17 +83,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <footer id="footer">
             <ul class="copyright">
                 <li>&copy; Paul Lisker</li>
-                <li>Design: <a href="https://html5up.net" rel="noopener" target=_blank>HTML5 UP</a></li>
+                <li>Design: <a href="https://html5up.net" rel="noopener noreferrer" target="_blank">HTML5 UP</a></li>
             </ul>
         </footer>
     </div>
     <!-- Scripts -->
-    <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
     <script>
-        if ('addEventListener' in window) {
-            window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-            document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-        }
+        window.addEventListener('load', function () {
+            document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+        });
     </script>
 </body>
 
